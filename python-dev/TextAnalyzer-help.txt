@@ -1,0 +1,77 @@
+Help on class TextAnalyzer in module __main__:
+
+class TextAnalyzer(builtins.object)
+ |  A Text Analyzer
+ |  
+ |  Methods defined here:
+ |  
+ |  __init__(self, src, src_type='discover')
+ |      Creates a object for analyzing text
+ |      
+ |      Keyword arguments:
+ |      src (str) -- text, path to file, or url
+ |      src_type (str) -- The type of input (text, path, url, discover)
+ |  
+ |  char_distribution(self, casesensitive=False, letters_only=False)
+ |      Returns a list of 2-element tuples of the format (char: num),
+ |      where num is the number of times char shows up in content
+ |      
+ |      Keyword arguments:
+ |      casesensitive (bool) -- Consider case?
+ |      letters_only (bool) -- Exclude non-letters?
+ |  
+ |  common_words(self, minlen=1, maxlen=100, count=10, casesensitive=False)
+ |      Returns a list of 2-element tuples of the format (word: num),
+ |      where num is the number of times word shows up in content
+ |      
+ |      Keyword arguments:
+ |      minlen (int) - Minimum length of words to include.
+ |      maxlen (int) - Maximum length of words to include.
+ |      count (int) - Number of words to include.
+ |      casesensitive (bool) -- If True makes all words uppercase
+ |  
+ |  plot_char_distribution(self, casesensitive=False, letters_only=False)
+ |      Plots character distribution
+ |      
+ |      Keyword arguments:
+ |      casesensitive (bool) -- If True makes all words uppercase
+ |      letters_only (bool) -- Exclude non-letters?
+ |  
+ |  plot_common_words(self, minlen=1, maxlen=100, count=10, casesensitive=False)
+ |      Plots most common words
+ |      
+ |      Keyword arguments:
+ |      minlen (int) -- Minimum length of words to include.
+ |      maxlen (int) -- Maximum length of words to include.
+ |      count (int) -- Number of words to include.
+ |      casesensitive (bool) -- If True makes all words uppercase
+ |  
+ |  reset_content(self)
+ |      Resets _content to full text.
+ |      Useful after a call to set_content_to_tag()
+ |  
+ |  set_content_to_tag(self, tag, tag_id=None)
+ |      Changes _content to the text within a specific element
+ |      of an HTML document
+ |      
+ |      Keyword arguments:
+ |      tag (str) -- Tag to read
+ |      tag_id (str) -- ID of tag to read
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+ |  
+ |  avg_word_length
+ |      Average word length
+ |  
+ |  distinct_word_count
+ |      Number of distinct words in content
+ |  
+ |  word_count
+ |      Number of words in content
